@@ -14,7 +14,7 @@ export default function App() {
     //window.alert(task);
 
     setTaskItems([...taskItems, task]); //This add a new task to a collection of tasks
-    setTask(null); //Clears the text input after adding a new task
+    setTask(""); //Clears the text input after adding a new task
 
   }
 
@@ -72,42 +72,50 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex:1,
-    backgroundColor: '#E8EAED',
+    backgroundColor: 'black',
+    width: '100%',
+    minHeight: '100%',
    
   },
 
   sectionTitle: {
     fontSize:24,
     fontWeight:'bold',
+    color:'white',
 
   },
 
   tasksWrapper: {
-    paddingTop:80,
-    paddingHorizontal:300,
+    paddingTop: 80,
+    width: '70%',
+    marginLeft: '15%',
+    marginRight: '15%',
+    marginTop: '2%',
     
   },
 
   writeTaskWrapper: {
     position: 'absolute',
     bottom: 60,
-    width: '100%',
+    width: '70%',
+    marginLeft: '15%',
+    marginRight: '15%',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    paddingHorizontal: 300,
-
-
   },
 
   input: {
     paddingHorizontal: 15,
     paddingVertical: 15,
     width: 350,
-    backgroundColor: '#fff',
+    backgroundColor: '#6d6e6a',
     borderRadius: 70,
     borderColor: '#c0c0c0',
     borderWidth: 1,
+    color: 'white',
+    fontSize: 20,
+    fontWeight: 'bold',
   },
 
   addWrapper: {
@@ -115,11 +123,19 @@ const styles = StyleSheet.create({
     width:60,
     height:60,
     borderRadius: 60,
-    backgroundColor: '#fff',
+    backgroundColor: '#6d6e6a',
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 1,
     borderColor: '#c0c0c0',
+
+  },
+
+  addText: {
+
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 25,
 
   },
 

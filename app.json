@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "TODOAPP",
-    "slug": "TODOAPP",
+    "name": "DARK TODO APP",
+    "slug": "dark-todo-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
