@@ -72,7 +72,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex:1,
-    backgroundColor: 'black',
+    backgroundColor: '#045b62',
     width: '100%',
     minHeight: '100%',
    
@@ -109,12 +109,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 15,
     width: 350,
-    backgroundColor: '#6d6e6a',
+    backgroundColor: 'white',
     borderRadius: 70,
-    borderColor: '#c0c0c0',
+    borderColor: 'white',
     borderWidth: 1,
-    color: 'white',
-    fontSize: 20,
+    color: 'black',
+    fontSize: 17,
     fontWeight: 'bold',
   },
 
@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     width:60,
     height:60,
     borderRadius: 60,
-    backgroundColor: '#6d6e6a',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 1,
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
 
   addText: {
 
-    color: 'white',
+    color: 'black',
     fontWeight: 'bold',
     fontSize: 25,
 
