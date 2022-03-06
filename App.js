@@ -29,7 +29,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.tasksWrapper}>
-        <Text style={styles.sectionTitle}>Tasks List</Text>
+        <Text style={styles.sectionTitle}>Today's Tasks</Text>
         <View styele={styles.items}>
 
           {
@@ -54,7 +54,7 @@ export default function App() {
 
       </View> 
 
-      <KeyboardAvoidingView behavior={Platform.OS == 'web' ? 'padding' : 'height'} style={styles.writeTaskWrapper}>
+      <KeyboardAvoidingView behavior={Platform.OS == 'android' | 'ios' | 'web' ? 'padding' : 'height'} style={styles.writeTaskWrapper}>
 
           <TextInput style={styles.input} placeholder="Write a task" value={task} onChangeText={text => setTask(text)}></TextInput>
 
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   input: {
     paddingHorizontal: 15,
     paddingVertical: 15,
-    width: 350,
+    width: '70%',
     backgroundColor: 'white',
     borderRadius: 70,
     borderColor: 'white',

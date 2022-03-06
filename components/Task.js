@@ -32,12 +32,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         marginTop: 20,
+        // overflow: 'scroll',
     },
 
     itemLeft: {
         flexDirection: 'row',
         alignItems: 'center',
         flexWrap: 'wrap',
+        flex: 1,
     },
 
     square: {
@@ -53,6 +55,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: 'black',
         fontSize: 18,
+        flexShrink: 1,
     },
 
     circular: {
