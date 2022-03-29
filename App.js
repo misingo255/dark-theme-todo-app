@@ -1,6 +1,6 @@
 
 import React, {useState} from 'react';
-import { KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View , Image} from 'react-native';
 import Task from './components/Task';
 
 
@@ -56,7 +56,14 @@ export default function App() {
 
       <KeyboardAvoidingView behavior={Platform.OS == 'android' | 'ios' | 'web' ? 'padding' : 'height'} style={styles.writeTaskWrapper}>
 
-          <TextInput style={styles.input} placeholder="Write a task" value={task} onChangeText={text => setTask(text)}></TextInput>
+          <TextInput style={styles.input} placeholder="Write a task" value={task} onChangeText={text => setTask(text)}>
+          </TextInput>
+
+          <TouchableOpacity>
+                  <View style={styles.datePickerWrapper}>
+                      <Image source={require('./assets/watch.png')} resizeMode = 'cover' style = {styles.datePickerIcon}/>
+                  </View>
+          </TouchableOpacity>
 
           <TouchableOpacity onPress={() =>  handleAddTask()}>
             <View style={styles.addWrapper}>
@@ -97,9 +104,10 @@ const styles = StyleSheet.create({
   writeTaskWrapper: {
     position: 'absolute',
     bottom: 60,
-    width: '70%',
-    marginLeft: '15%',
-    marginRight: '15%',
+    width: '90%',
+    marginLeft: '5%',
+    marginRight: '5%',
+    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
@@ -108,7 +116,7 @@ const styles = StyleSheet.create({
   input: {
     paddingHorizontal: 15,
     paddingVertical: 15,
-    width: '70%',
+    width: '50%',
     backgroundColor: 'white',
     borderRadius: 70,
     borderColor: 'white',
@@ -139,5 +147,22 @@ const styles = StyleSheet.create({
 
   },
 
+  datePickerWrapper: {
+
+    width:60,
+    height:60,
+    borderRadius: 60,
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: '#c0c0c0',
+  },
+
+
+  datePickerIcon: {
+    flex: 1,
+    flexDirection: 'column',
+  },
  
 });
