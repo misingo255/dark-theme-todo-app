@@ -2,7 +2,7 @@
 import React, {useState} from 'react';
 import { KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View , Image} from 'react-native';
 import Task from './components/Task';
-// import DatePicker from 'react-native-date-picker'
+//import DatePicker from 'react-native-date-picker'
 
 // const [date, setDate] = useState(new Date())
 // const [open, setOpen] = useState(false)
